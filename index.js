@@ -26,4 +26,4 @@ document.body.addEventListener('click', (e) => {
     const li = e.target.parentElement;
     li.remove();
   }
-})
+});
