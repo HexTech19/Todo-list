@@ -5,12 +5,11 @@ const deleteButton = document.querySelectorAll('.del-btn');
 
 
 //Getting the input value
-let inputVal;
 input.addEventListener('keyup', () => {
   setTimeout(() => {
      inputVal = input.value;
   },500)
-})
+});
 
 //adding the todo to the list
 
