@@ -80,3 +80,7 @@ ul li{
  border: none;
 }
 
+li button{
+  background: rgb(42, 42, 150);
+}
+
