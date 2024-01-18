@@ -65,7 +65,7 @@
 .list-item{
   list-style: none;
   font-size: 17px;
-  padding: 12px 8px 12px 50px;
+  padding: 12px 2px 12px 30px;
 }
 
 .todo-div {
@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 30px;
-  padding-left: 20px;
+  padding-left: 10px;
   margin-bottom: 25px;
   max-width: 30%;
   margin-left: 35%;
