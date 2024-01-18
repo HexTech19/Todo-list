@@ -11,15 +11,15 @@
   background: linear-gradient(135deg, rgb(32, 28, 28), aqua );
 }
 
-.todo{
+.todo-app{
   width: 100%;
   max-width: 540px;
-  margin: 100px auto;
+  margin: 10px auto;
   padding: 40px 30px;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
-.todo h2 {
+.todo-app h2 {
   color: #324a71;
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -43,48 +43,40 @@
   background: transparent;
   padding: 10px;
   font-weight: 14px;
+  font-size: 1.3rem;
 }
 
-button {
+.add-btn, button {
   cursor: pointer;
   border: none;
   outline: none;
   padding: 16px 50px;
   background: navy;
   color:#ffff;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 40px;
 }
 
-.list {
-  display: flex;
-  align-content: center;
-  justify-content: center;
+.add-btn:hover {
+  background: rgb(13, 13, 154);
+  color: aqua;
 }
 
-.list-items{
- min-width: 30%;
- list-style: none;
+.list-item{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
 }
 
-.to-do {
-  margin: 0.5rem;
-  background: white;
-  color: navy;
+.todo-div {
+  background-color: #edeef0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 1.5rem;
-  border-radius: 40px;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  max-width: 30%;
+  margin-left: 35%;
 }
 
-.to-do li {
-  flex: 1;
-}
-
-.check {
-  background: aquamarine;
-  color: white;
-  border: none;
- 
-}
