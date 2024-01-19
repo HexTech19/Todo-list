@@ -1,46 +1,63 @@
 const input = document.querySelector('.text-input');
 const addButton = document.querySelector('.add-btn');
-const list = document.querySelector('.list-item');
+const list = document.querySelectorAll('.list-item');
 const todoDiv = document.querySelector('.todo-div');
 const deleteButton = document.querySelectorAll('.del-btn');
+const listContainer = document.querySelector('.list-container')
 
 
 //Getting the input value
 let inputVal;
 input.addEventListener('keyup', () => {
   setTimeout(() => {
-     inputVal = input.value;
-     console.log(inputVal)
+     inputVal = input.value;  
   },500)
 });
 
-// //adding the todo to the list
-// function addTodo(e) {
-//   let newLi = document.createElement('li');
-//   newLi.innerText = `${inputVal}`
-//   newLi.classList.add('todo-li');
-//   toDo.appendChild(newLi);
+// adding the todo to the list
+function addTodo(e) {
 
-//   //checked button
-//   // const doneBtn = document.createElement('input');
-//   // doneBtn.type="checkbox";
-//   // doneBtn.classList.add('check');
-//   // toDo.appendChild(doneBtn);
+  //create div
+  let newDiv = document.createElement('div');
+  newDiv.classList.add('todo-div');
+  listContainer.appendChild(newDiv);
 
-//   //delete button
-//   const btn = document.createElement('button');
-//   btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-//   btn.classList.add('del-btn');
-//   toDo.appendChild(btn);
-// }
+  //newList item
+  let newLi = document.createElement('li');
+  newLi.innerText = `${inputVal}`
+  newLi.classList.add('list-item');
+  newDiv.appendChild(newLi);
 
-// //making the add button add the todo
-// addButton.addEventListener('click', addTodo);
 
-// //deleting the todo
-// document.body.addEventListener('click', (e) => {
-//   if (e.target.matches('.del-btn')) {
-//     const li = e.target.parentElement;
-//     li.remove();
-//   }
-// });
+  //delete button
+  const btn = document.createElement('button');
+  btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+  btn.classList.add('del-btn');
+  newDiv.appendChild(btn);
+
+  input.value = '';
+}
+
+//making the add button add the todo
+addButton.addEventListener('click', addTodo);
+
+//deleting the todo
+document.body.addEventListener('click', deleteTodo);
+
+function deleteTodo(e) {
+  if (e.target.matches('.del-btn')) {
+    const deletedDiv = e.target.parentElement;
+    deletedDiv.remove();
+  }
+}
+
+//making the event button add a todo
+
+function handleKeyPress(event) {
+  if (event.keyCode === 13) {
+    addTodo();
+  }
+}
+
+document.addEventListener('keypress', handleKeyPress);
+
