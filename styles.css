@@ -89,6 +89,7 @@
 }
 
 @media (max-width: 782px) {
+
   .input-container {
    justify-content: center;
    padding: 0;
@@ -101,6 +102,6 @@
   .todo-div {
     max-width: 70%;
     min-width: 70%;
-    margin-left: 18%;
+    margin-left: 15%;
   }
-}
+  }
