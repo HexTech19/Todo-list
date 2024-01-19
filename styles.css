@@ -20,7 +20,7 @@
 }
 
 .todo-app h2 {
-  color: #324a71;
+  color: #a1bce7;
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
@@ -43,7 +43,6 @@
   outline: none;
   background: transparent;
   padding: 10px;
-  font-weight: 14px;
   font-size: 1.3rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
@@ -80,10 +79,28 @@
   padding-left: 0px;
   margin-bottom: 10px;
   max-width: 40%;
+  min-width: 40%;
   margin-left: 30%;
 }
 
 .todo-div li{
   font-size: 25px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (max-width: 782px) {
+  .input-container {
+   justify-content: center;
+   padding: 0;
+  }
+
+  .text-input {
+    text-align: center;
+  }
+
+  .todo-div {
+    max-width: 70%;
+    min-width: 70%;
+    margin-left: 18%;
+  }
 }
