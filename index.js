@@ -11,7 +11,7 @@ let inputVal;
 input.addEventListener('keyup', () => {
   setTimeout(() => {
      inputVal = input.value;  
-  },500)
+  },200)
 });
 
 // adding the todo to the list
