@@ -49,7 +49,7 @@ function deleteTodo(e) {
     const deletedDiv = e.target.parentElement;
     deletedDiv.remove();
   }
-}
+};
 
 //making the event button add a todo
 
