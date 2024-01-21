@@ -36,7 +36,7 @@ function addTodo(e) {
   newDiv.appendChild(btn);
 
   input.value = '';
-}
+};
 
 //making the add button add the todo
 addButton.addEventListener('click', addTodo);
