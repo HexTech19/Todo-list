@@ -57,7 +57,7 @@ function handleKeyPress(event) {
   if (event.keyCode === 13) {
     addTodo();
   }
-}
+};
 
 document.addEventListener('keypress', handleKeyPress);
 
